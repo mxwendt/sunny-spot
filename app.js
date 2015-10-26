@@ -52,8 +52,8 @@ three.on("argon:realityChange", function(event) {
   cameraPosition.x += 5;
   boxGeoObject.position.copy(cameraPosition);
   three.argon.updateEntityFromObject(boxGeoObject);
-  // getCartographicDegreesFromObject will return undefined if geoObject is not defined in geographic coordinates  which would happen if this Reality does not support geographic coordinates
-  geoObjectPos = three.argon.getCartographicDegreesFromObject(boxGeoObject) || [0,0,0];
+  // getCartographicDegreesFromEntity will return undefined if geoObject is not defined in geographic coordinates  which would happen if this Reality does not support geographic coordinates
+  geoObjectPos = three.argon.getCartographicDegreesFromEntity(boxGeoObject) || [0,0,0];
 });
 
 var lastInfoText;
