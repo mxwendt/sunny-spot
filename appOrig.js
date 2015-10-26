@@ -37,7 +37,7 @@
   // you should probably adjust this to a spot closer to you (we found the lon/lat of Georgia Tech using Google Maps)
   var gatechGeoEntity = new Argon.Cesium.Entity({
       name: "Georgia Tech",
-      position: Argon.Cesium.Cartesian3.fromDegrees(-84.398881, 33.778463)
+      position: Argon.Cesium.Cartesian3.fromDegrees(55.6133068, 12.9741071, 300)
     })
 
   // create a three Object3D linked to a Cesium Entity.  Get's added to the scene for us.
