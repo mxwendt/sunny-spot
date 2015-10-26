@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="argon-required-reference-frames" content="FIXED" />
+  <title>Sunny Spot</title>
+
+  <!-- One or more style sheets for styling the elements in the body -->
+  <link rel="stylesheet" type="text/css" href="app.css">
+</head>
+<body>
+
+  <!-- any html for interface elements etc. that will appear on the screen in AR mode -->
+  <div id="argon-immersive-context">
+    <div id="menu">
+      <button id="location">lon (0) lat (0)</button>
+    </div>
+  </div>
+
+  <!-- any html that you want to appear in "page mode" described below -->
+  <h1>Where's The Sunny Spot: A geolocation example</h1>
+
+  <!-- three.js, a 3D Scene graph for the web -->
+  <script src="lib/three.js" type="text/javascript"></script>
+
+  <!-- threestrap.js is a bootstrapping library that makes three.js easier to work with. Argon-three.js requires it -->
+  <script src="lib/threestrap.js" type="text/javascript"></script>
+
+  <!-- The argon library support for integration of three.js and argon.js -->
+  <script src="lib/argon.js"></script>
+  <script src="lib/argon-three.js"></script>
+
+  <!-- application javascript code -->
+  <script src="app.js"></script>
+</body>
+</html>
