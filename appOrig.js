@@ -1,17 +1,4 @@
-Skip to content
-This repository
-Pull requests
-Issues
-Gist
- @mxwendt
- Watch 4
-  Star 1
- Fork 1 argonjs/argon-tutorials
- Branch: master  argon-tutorials/tutorial2/app.js
-cb802b5  on Aug 11
-@jdbolter jdbolter Added tutorial folders
-1 contributor
-RawBlameHistory     162 lines (140 sloc)  6.78 KB
+
   // make floating point output a little less ugly
   function toFixed(value, precision) {
     var power = Math.pow(10, precision || 0);
@@ -173,5 +160,3 @@ RawBlameHistory     162 lines (140 sloc)  6.78 KB
       lastInfoText = infoText;
     }
   })
-Status API Training Shop Blog About Pricing
-© 2015 GitHub, Inc. Terms Privacy Security Contact Help
