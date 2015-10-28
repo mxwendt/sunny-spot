@@ -29,7 +29,7 @@ var rotundan = new THREE.Object3D;
 //   rotundan.add(mesh);
 // });
 
-var geometry = new THREE.SphereGeometry(500, 32, 32);
+var geometry = new THREE.SphereGeometry(50, 32, 32);
 var material = new THREE.MeshBasicMaterial({color: 0xffff00});
 var sphere = new THREE.Mesh(geometry, material);
 // rotundan.add(sphere);
@@ -43,7 +43,7 @@ var sphere = new THREE.Mesh(geometry, material);
 // Create a new Cesium Entity for the sun at 12:00
 var rotundanGeoEntity = new Argon.Cesium.Entity({
   name: 'Sun 12:00',
-  position: Argon.Cesium.Cartesian3.fromDegrees(13.053773, 50.587422)
+  position: Argon.Cesium.Cartesian3.fromDegrees(13.053773, 54.587422, 300)
 });
 
 var rotundanGeoTarget = three.argon.objectFromEntity(rotundanGeoEntity);
