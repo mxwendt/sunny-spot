@@ -29,7 +29,7 @@ var rotundan = new THREE.Object3D;
 //   rotundan.add(mesh);
 // });
 
-var geometry = new THREE.SphereGeometry(5, 32, 32);
+var geometry = new THREE.SphereGeometry(500, 32, 32);
 var material = new THREE.MeshBasicMaterial({color: 0xffff00});
 var sphere = new THREE.Mesh(geometry, material);
 // rotundan.add(sphere);
