@@ -47,7 +47,7 @@ rotundanTextureLoader.load('buzz.png', function (texture) {
 // Create a new Cesium Entity for the sun at 12:00
 var rotundanGeoEntity = new Argon.Cesium.Entity({
   name: 'Sun 12:00',
-  position: Argon.Cesium.Cartesian3.fromDegrees(13.053773, 54.587422)
+  position: Argon.Cesium.Cartesian3.fromDegrees(13.053773, 55.587422)
 });
 
 var rotundanGeoTarget = three.argon.objectFromEntity(rotundanGeoEntity);
