@@ -146,8 +146,9 @@ three.on('update', function(e) {
   infoText += 'rotundan (' + rotundanGeographicDeg[0] + ', ' + rotundanGeographicDeg[1] + ', ' + rotundanGeographicDeg[2] + '\n';
   infoText += 'distance to rotundan (' + distanceToRotundan + ')';
 
-  // if (lastInfoText !== infoText) {
+  // Don't rerender the same information
+  if (lastInfoText !== infoText) {
     locationElem.innerText = infoText;
-    // lastInfoText = infoText;
-  // }
+    lastInfoText = infoText;
+  }
 });
