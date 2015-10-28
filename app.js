@@ -32,7 +32,7 @@ rotundanTextureLoader.load('buzz.png', function (texture) {
 // Create a new Cesium Entity
 var rotundanGeoEntity = new Argon.Cesium.Entity({
   name: 'Restaurant Rotundan',
-  position: Argon.Cesium.Cartesian3.fromDegrees(55.587422, 13.053773)
+  position: Argon.Cesium.Cartesian3.fromDegrees(13.053773, 55.587422)
 });
 
 var rotundanGeoTarget = three.argon.objectFromEntity(rotundanGeoEntity);
@@ -123,7 +123,7 @@ three.on('update', function(e) {
 
   // Ouput some information
   infoText = 'Operation Rotundan:\n';
-  infoText += 'frame: ' + state.frameNumber;
+  // infoText += 'frame: ' + state.frameNumber + '\n';
   infoText += 'argon time: (' + three.argon.time.secondsOfDay + ')\n';
   infoText += 'three time: (' + three.Time.now + ')\n';
   infoText += 'camera: ' + cameraPos + '\n';
