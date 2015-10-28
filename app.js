@@ -32,7 +32,7 @@ var rotundan = new THREE.Object3D;
 var geometry = new THREE.SphereGeometry(5, 32, 32);
 var material = new THREE.MeshBasicMaterial({color: 0xffff00});
 var sphere = new THREE.Mesh(geometry, material);
-rotundan.add(sphere);
+// rotundan.add(sphere);
 
 // Create a new Cesium Entity
 // var rotundanGeoEntity = new Argon.Cesium.Entity({
@@ -43,11 +43,11 @@ rotundan.add(sphere);
 // Create a new Cesium Entity for the sun at 12:00
 var rotundanGeoEntity = new Argon.Cesium.Entity({
   name: 'Sun 12:00',
-  position: Argon.Cesium.Cartesian3.fromDegrees(13.053773, 45.587422)
+  position: Argon.Cesium.Cartesian3.fromDegrees(13.053773, 55.587422)
 });
 
 var rotundanGeoTarget = three.argon.objectFromEntity(rotundanGeoEntity);
-rotundanGeoTarget.add(rotundan);
+rotundanGeoTarget.add(sphere);
 
 /**
  * Each time our context is assigned a new Reality, including the first time, we
