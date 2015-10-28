@@ -51,7 +51,7 @@ var rotundanGeoEntity = new Argon.Cesium.Entity({
 });
 
 var rotundanGeoTarget = three.argon.objectFromEntity(rotundanGeoEntity);
-rotundanGeoTarget.add(circle);
+rotundanGeoTarget.add(rotundan.add(circle));
 
 /**
  * Each time our context is assigned a new Reality, including the first time, we
@@ -141,7 +141,7 @@ three.on('update', function(e) {
   // infoText += 'frame: ' + state.frameNumber + '\n';
   // infoText += 'argon time: (' + three.argon.time.secondsOfDay + ')\n';
   // infoText += 'three time: (' + three.Time.now + ')\n';
-  infoText += 'camera: ' + cameraPos + '\n';
+  infoText += 'camera (' + cameraPos[0] + ', ' + cameraPos[1] + ', ' + cameraPos[2] + '\n';
   infoText += 'eye (' + gpsCartographicDeg[0] + ', ' + gpsCartographicDeg[1] + ', ' + gpsCartographicDeg[2] + '\n';
   infoText += 'rotundan (' + rotundanGeographicDeg[0] + ', ' + rotundanGeographicDeg[1] + ', ' + rotundanGeographicDeg[2] + '\n';
   infoText += 'distance to rotundan (' + distanceToRotundan + ')';
