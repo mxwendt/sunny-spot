@@ -110,9 +110,9 @@ three.on('update', function(e) {
   var locationElem = document.getElementById('location');
   var state = e.argonState;
   var gpsCartographicDeg = [0, 0, 0];
-  var rotundanGeographicDeg = [0, 0, 0];
+  var sphereGeographicDeg = [0, 0, 0];
   var cameraPos;
-  var rotundanPos;
+  var spherePos;
   var distanceToRotundan;
   var infoText;
 
@@ -128,14 +128,14 @@ three.on('update', function(e) {
   }
 
   // Get Rotundans cartographic degrees as well
-  if (three.argon.getCartographicDegreesFromEntity(rotundanGeoEntity)) {
-    rotundanGeographicDeg = three.argon.getCartographicDegreesFromEntity(rotundanGeoEntity)
+  if (three.argon.getCartographicDegreesFromEntity(sphereGeoEntity)) {
+    sphereGeographicDeg = three.argon.getCartographicDegreesFromEntity(sphereGeoEntity)
   }
 
   // Calculate some information
   cameraPos = three.camera.getWorldPosition();
-  rotundanPos = sphere.getWorldPosition();
-  distanceToRotundan = cameraPos.distanceTo(rotundanPos);
+  spherePos = sphere.getWorldPosition();
+  distanceToRotundan = cameraPos.distanceTo(spherePos);
 
   // Ouput some information
   infoText = 'Operation Rotundan:\n';
@@ -144,7 +144,7 @@ three.on('update', function(e) {
   // infoText += 'three time: (' + three.Time.now + ')\n';
   infoText += 'camera (' + cameraPos[0] + ', ' + cameraPos[1] + ', ' + cameraPos[2] + '\n';
   infoText += 'eye (' + gpsCartographicDeg[0] + ', ' + gpsCartographicDeg[1] + ', ' + gpsCartographicDeg[2] + '\n';
-  infoText += 'rotundan (' + rotundanGeographicDeg[0] + ', ' + rotundanGeographicDeg[1] + ', ' + rotundanGeographicDeg[2] + '\n';
+  infoText += 'sphere (' + sphereGeographicDeg[0] + ', ' + sphereGeographicDeg[1] + ', ' + sphereGeographicDeg[2] + '\n';
   infoText += 'distance to rotundan (' + distanceToRotundan + ')';
 
   // Don't rerender the same information
