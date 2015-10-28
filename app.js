@@ -20,19 +20,30 @@ var three = THREE.Bootstrap(options);
 var rotundan = new THREE.Object3D;
 
 // Add a texture to the Object3D
-var rotundanTextureLoader = new THREE.TextureLoader();
-rotundanTextureLoader.load('buzz.png', function (texture) {
-  var geometry = new THREE.BoxGeometry(10, 10, 10);
-  var material = new THREE.MeshBasicMaterial({ map: texture });
-  var mesh = new THREE.Mesh(geometry, material);
-  mesh.scale.set(10, 10, 10);
-  rotundan.add(mesh);
-});
+// var rotundanTextureLoader = new THREE.TextureLoader();
+// rotundanTextureLoader.load('buzz.png', function (texture) {
+//   var geometry = new THREE.BoxGeometry(10, 10, 10);
+//   var material = new THREE.MeshBasicMaterial({ map: texture });
+//   var mesh = new THREE.Mesh(geometry, material);
+//   mesh.scale.set(10, 10, 10);
+//   rotundan.add(mesh);
+// });
+
+var geometry = new THREE.SphereGeometry(5, 32, 32);
+var material = new THREE.MeshBasicMaterial({color: 0xffff00});
+var sphere = new THREE.Mesh(geometry, material);
+rotundan.add(sphere);
 
 // Create a new Cesium Entity
+// var rotundanGeoEntity = new Argon.Cesium.Entity({
+//   name: 'Restaurant Rotundan',
+//   position: Argon.Cesium.Cartesian3.fromDegrees(13.053773, 55.587422)
+// });
+
+// Create a new Cesium Entity for the sun at 12:00
 var rotundanGeoEntity = new Argon.Cesium.Entity({
-  name: 'Restaurant Rotundan',
-  position: Argon.Cesium.Cartesian3.fromDegrees(13.053773, 55.587422)
+  name: 'Sun 12:00',
+  position: Argon.Cesium.Cartesian3.fromDegrees(13.053773, 45.587422)
 });
 
 var rotundanGeoTarget = three.argon.objectFromEntity(rotundanGeoEntity);
@@ -124,8 +135,8 @@ three.on('update', function(e) {
   // Ouput some information
   infoText = 'Operation Rotundan:\n';
   // infoText += 'frame: ' + state.frameNumber + '\n';
-  infoText += 'argon time: (' + three.argon.time.secondsOfDay + ')\n';
-  infoText += 'three time: (' + three.Time.now + ')\n';
+  // infoText += 'argon time: (' + three.argon.time.secondsOfDay + ')\n';
+  // infoText += 'three time: (' + three.Time.now + ')\n';
   infoText += 'camera: ' + cameraPos + '\n';
   infoText += 'eye (' + gpsCartographicDeg[0] + ', ' + gpsCartographicDeg[1] + ', ' + gpsCartographicDeg[2] + '\n';
   infoText += 'rotundan (' + rotundanGeographicDeg[0] + ', ' + rotundanGeographicDeg[1] + ', ' + rotundanGeographicDeg[2] + '\n';
